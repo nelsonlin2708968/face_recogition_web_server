@@ -4,6 +4,7 @@ import pygame
 #mixer.init()
 jesse = "Jesse"
 nelson = "Nelson"
+sang = "Sang"
 
 root = "/home/pi/Development/raspi-sound-test/"
 beat = root + "beat.mp3"
@@ -15,6 +16,9 @@ pygame.mixer.init()
 def playTheme(name):
     #while True:
         #person = input()
+    if name == sang:
+        pygame.mixer.music.load(starwars)
+        print("Itsa " + sang)
     if name == jesse:
         pygame.mixer.music.load(trap)
         print("Itsa " + jesse)

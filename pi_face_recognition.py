@@ -91,6 +91,10 @@ while True:
             name = max(counts, key=counts.get)
             if name == "Nelson": 
                 counter+=1
+            if name == "Jesse": 
+                counter+=1
+            if name == "Sang": 
+                counter+=1
 
 
         #update the list of names
@@ -106,9 +110,9 @@ while True:
     
     print("updating fps")
     
-    if counter == 4:
-        name = "Nelson"
+    if counter == 2:
         playtheme.playTheme(name)
+        #name = "Nelson"
 
     
     #display the image to our sreen

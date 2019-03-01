@@ -8,13 +8,14 @@ import cv2
 import os
 
 #arguemnt parser
-#ap = argparse.ArgumentParser()
-#ap.add_argument("-c", "--cascade", required=True, help = "path to face cascade")
-#ap.add_argument("-o", "--output", required=True, help = "path to output directory")
-#args = vars(ap.parse_args())
+ap = argparse.ArgumentParser()
+ap.add_argument("-c", "--cascade", required=True, help = "path to face cascade")
+ap.add_argument("-o", "--output", required=True, help = "path to output directory")
+args = vars(ap.parse_args())
+
 
 def gather():
-    args = {"cascade" : "haarcascade_frontalface_default.xml", "output" : "test"}
+    #args = {"cascade" : "haarcascade_frontalface_default.xml", "output" : "test"}
     #load opencv's haar cascade for face detection
     detector = cv2.CascadeClassifier(args["cascade"])
     
@@ -70,4 +71,6 @@ def gather():
     print("[INFO] cleaning up")
     cv2.destroyAllWindows()
     vs.stop()
+
+gather()
     
